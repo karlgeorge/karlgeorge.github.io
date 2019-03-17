@@ -152,6 +152,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/17/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/17/hello-world/" class="archive-article-date">
+  	<time datetime="2019-03-17T09:16:02.515Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/17/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-搭建shadowsocks服务器的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -159,7 +230,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/17/搭建shadowsocks服务器的方法/">搭建ss服务器方法</a>
+      <a class="article-title" href="/2019/03/17/搭建shadowsocks服务器的方法/">ss服务器及客户端使用方法</a>
     </h1>
   
 
@@ -173,45 +244,35 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>很多这种教程都被删了，故现在搬运了一份到个人博客上以备不时之需</p>
-<p>PS：该系统环境为Ubuntu或Debian</p>
-<p>第一步：<br>安装shadowsocks客户端</p>
-<p>sudo apt-get install python-pip python-m2crypto</p>
-<p>sudo pip install shadowsocks<br>第二步：<br>sudo vim /etc/shadowsocks.json<br>配置内容为如下（汉字部分自己替换）<br>···<br>{</p>
-<pre><code>&quot;server&quot;:&quot;这里换成你自己的代理IP&quot;,
-
-&quot;server_port&quot;:代理端口号,
-
-&quot;local_address&quot;: &quot;127.0.0.1&quot;,
-
-&quot;local_port&quot;:1080,
-
-&quot;password&quot;:&quot;密码&quot;,
-
-&quot;timeout&quot;:600,
-
-&quot;method&quot;:&quot;aes-256-cfb&quot;,
-
-&quot;fast_open&quot;: false,
-</code></pre><p>}<br>···<br>第三步：<br>检查代理能否正常运行<br>···<br>sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start<br>···<br>如果报错（如下）<br>···<br>AttributeError: /usr/local/lib/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup<br>···<br>则是由于Openssl库更新导致的方法名称变更问题，修复方法如下：<br>···<br>sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py<br>···<br>openssl.py文件路径请在上面的报错信息中查找，我这里的路径如上所示。将第52行的<br>···<br>libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)<br>···<br>改为<br>···<br>libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)<br>···<br>还有第111行的</p>
-<p>libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)<br>改为<br>libcrypto.EVP_CIPHER_CTX_reset(self._ctx)<br>第四步：<br>添加开机启动<br>sudo vim /etc/rc.local<br>在最后一行 exit 0 上面添加如下语句：<br>sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start<br>检查是否正常</p>
-<p>sudo systemctl status rc-local.service<br>第五步：<br>使用Polipo将Sock5流量转换为HTTP流量<br>安装Polipo</p>
-<p>sudo apt-get install polipo<br>编辑Polipo配置文件</p>
-<p>sudo vim /etc/polipo/config<br>配置文件内容如下</p>
-<h1 id="This-file-only-needs-to-list-configuration-variables-that-deviate"><a href="#This-file-only-needs-to-list-configuration-variables-that-deviate" class="headerlink" title="This file only needs to list configuration variables that deviate"></a>This file only needs to list configuration variables that deviate</h1><h1 id="from-the-default-values-See-usr-share-doc-polipo-examples-config-sample"><a href="#from-the-default-values-See-usr-share-doc-polipo-examples-config-sample" class="headerlink" title="from the default values.  See /usr/share/doc/polipo/examples/config.sample"></a>from the default values.  See /usr/share/doc/polipo/examples/config.sample</h1><h1 id="and-“polipo-v”-for-variables-you-can-tweak-and-further-information"><a href="#and-“polipo-v”-for-variables-you-can-tweak-and-further-information" class="headerlink" title="and “polipo -v” for variables you can tweak and further information."></a>and “polipo -v” for variables you can tweak and further information.</h1><p>logSyslog = false</p>
-<p>logFile = /var/log/polipo/polipo.log</p>
-<p>socksParentProxy = “127.0.0.1:1080”</p>
-<p>socksProxyType = socks5</p>
-<p>chunkHighMark = 50331648</p>
-<p>objectHighMark = 16384</p>
-<p>serverMaxSlots = 64</p>
-<p>serverSlots = 16</p>
-<p>serverSlots1 = 32</p>
-<p>proxyAddress = “0.0.0.0”</p>
-<p>proxyPort = 8123<br>重启Polipo</p>
-<p>sudo /etc/init.d/polipo restart<br>第六步<br>为终端设置全局代理</p>
-<p>sudo vim /etc/profile<br>在配置最后添加</p>
-<p>export http_proxy=”127.0.0.1:8123”<br>第七步<br>关闭当前终端重开一个新的终端<br>测试</p>
-<p>curl <a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br>若成功下载页面，则代理设置成功</p>
+<p>首先是shadowsock服务器：</p>
+<p>安装python<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python</span><br></pre></td></tr></table></figure></p>
+<p>下载pip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate</span><br></pre></td></tr></table></figure></p>
+<p>或者从这里下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://img.qinyang.me/blog/get-pip.py</span><br></pre></td></tr></table></figure></p>
+<p>安装pip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~# python get-pip.py </span><br><span class="line">Collecting pip</span><br><span class="line">Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)</span><br><span class="line">100% |################################| 1.3MB 1.2MB/s </span><br><span class="line">Collecting wheel</span><br><span class="line">Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)</span><br><span class="line">100% |################################| 71kB 12.8MB/s </span><br><span class="line">Installing collected packages: pip, wheel</span><br><span class="line">Successfully installed pip-9.0.1 wheel-0.29.0</span><br><span class="line">root@localhost:~# pip install shadowsocks</span><br><span class="line">Collecting shadowsocks</span><br><span class="line">Downloading shadowsocks-2.8.2.tar.gz</span><br><span class="line">Building wheels for collected packages: shadowsocks</span><br><span class="line">Running setup.py bdist_wheel for shadowsocks ... done</span><br><span class="line">Stored in directory: /root/.cache/pip/wheels/c9/d8/ff/5425932823af361970658e9421b4d53ac50b08dcbe6fd41e5f</span><br><span class="line">Successfully built shadowsocks</span><br><span class="line">Installing collected packages: shadowsocks</span><br><span class="line">Successfully installed shadowsocks-2.8.2</span><br></pre></td></tr></table></figure></p>
+<p>配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~# vi /etc/shadowsocks.json </span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;ss.qinyang.me&quot;,</span><br><span class="line">    &quot;server_port&quot;:8388,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;password&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最后，启动ss-server：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json -d start</span><br></pre></td></tr></table></figure></p>
+<p>至此ss服务器配置完成，接下来是客户端：</p>
+<p>第一步：<br>安装shadowsocks客户端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-pip python-m2crypto</span><br><span class="line"></span><br><span class="line">sudo pip install shadowsocks</span><br></pre></td></tr></table></figure></p>
+<p>第二步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/shadowsocks.json</span><br></pre></td></tr></table></figure></p>
+<p>配置内容为如下（汉字部分自己替换）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    &quot;server&quot;:&quot;这里换成你自己的代理IP&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;server_port&quot;:代理端口号,</span><br><span class="line"></span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line"></span><br><span class="line">    &quot;password&quot;:&quot;密码&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line"></span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line"></span><br><span class="line">    &quot;fast_open&quot;: false,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>第三步：<br>检查代理能否正常运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start</span><br></pre></td></tr></table></figure></p>
+<p>如果报错（如下）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AttributeError: /usr/local/lib/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup</span><br></pre></td></tr></table></figure></p>
+<p>则是由于Openssl库更新导致的方法名称变更问题，修复方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py</span><br></pre></td></tr></table></figure></p>
+<p>openssl.py文件路径请在上面的报错信息中查找，我这里的路径如上所示。将第52行的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)</span><br></pre></td></tr></table></figure></p>
+<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)</span><br></pre></td></tr></table></figure></p>
+<p>还有第111行的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)</span><br></pre></td></tr></table></figure></p>
+<p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libcrypto.EVP_CIPHER_CTX_reset(self._ctx)</span><br></pre></td></tr></table></figure></p>
+<p>第四步：<br>添加开机启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/rc.local</span><br></pre></td></tr></table></figure></p>
+<p>在最后一行 exit 0 上面添加如下语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start</span><br></pre></td></tr></table></figure></p>
+<p>检查是否正常<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status rc-local.service</span><br></pre></td></tr></table></figure></p>
+<p>第五步：<br>使用Polipo将Sock5流量转换为HTTP流量<br>安装Polipo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install polipo</span><br></pre></td></tr></table></figure></p>
+<p>编辑Polipo配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/polipo/config</span><br></pre></td></tr></table></figure></p>
+<p>配置文件内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># This file only needs to list configuration variables that deviate</span><br><span class="line"></span><br><span class="line"># from the default values.  See /usr/share/doc/polipo/examples/config.sample</span><br><span class="line"></span><br><span class="line"># and &quot;polipo -v&quot; for variables you can tweak and further information.</span><br><span class="line"></span><br><span class="line">logSyslog = false</span><br><span class="line"></span><br><span class="line">logFile = /var/log/polipo/polipo.log</span><br><span class="line"></span><br><span class="line">socksParentProxy = &quot;127.0.0.1:1080&quot;</span><br><span class="line"></span><br><span class="line">socksProxyType = socks5</span><br><span class="line"></span><br><span class="line">chunkHighMark = 50331648</span><br><span class="line"></span><br><span class="line">objectHighMark = 16384</span><br><span class="line"></span><br><span class="line">serverMaxSlots = 64</span><br><span class="line"></span><br><span class="line">serverSlots = 16</span><br><span class="line"></span><br><span class="line">serverSlots1 = 32</span><br><span class="line"></span><br><span class="line">proxyAddress = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line">proxyPort = 8123</span><br></pre></td></tr></table></figure></p>
+<p>重启Polipo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/polipo restart</span><br></pre></td></tr></table></figure></p>
+<p>第六步<br>为终端设置全局代理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure></p>
+<p>在配置最后添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export http_proxy=&quot;127.0.0.1:8123&quot;</span><br></pre></td></tr></table></figure></p>
+<p>第七步<br>关闭当前终端重开一个新的终端<br>测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://www.google.com</span><br></pre></td></tr></table></figure></p>
+<p>若成功下载页面，则代理设置成功</p>
 
       
 
@@ -220,6 +281,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻墙 vpn shadowsock</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -408,6 +480,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">翻墙 vpn shadowsock</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
