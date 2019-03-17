@@ -176,7 +176,7 @@
 <p>PS：该系统环境为Ubuntu或Debian</p>
 <p>第一步：<br>安装shadowsocks客户端</p>
 <p>sudo apt-get install python-pip python-m2crypto</p>
-<p>sudo pip install shadowsocks<br>第二步：<br>sudo vim /etc/shadowsocks.json<br>配置内容为如下（汉字部分自己替换）<br>··<br>{</p>
+<p>sudo pip install shadowsocks<br>第二步：<br>sudo vim /etc/shadowsocks.json<br>配置内容为如下（汉字部分自己替换）<br>···<br>{</p>
 <pre><code>&quot;server&quot;:&quot;这里换成你自己的代理IP&quot;,
 
 &quot;server_port&quot;:代理端口号,
@@ -192,12 +192,7 @@
 &quot;method&quot;:&quot;aes-256-cfb&quot;,
 
 &quot;fast_open&quot;: false,
-</code></pre><p>}<br>··<br>第三步：<br>检查代理能否正常运行</p>
-<p>sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start<br>如果报错（如下）</p>
-<p>AttributeError: /usr/local/lib/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup<br>则是由于Openssl库更新导致的方法名称变更问题，修复方法如下：</p>
-<p>sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py<br>openssl.py文件路径请在上面的报错信息中查找，我这里的路径如上所示。将第52行的</p>
-<p>libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)<br>改为</p>
-<p>libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)<br>还有第111行的</p>
+</code></pre><p>}<br>···<br>第三步：<br>检查代理能否正常运行<br>···<br>sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start<br>···<br>如果报错（如下）<br>···<br>AttributeError: /usr/local/lib/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup<br>···<br>则是由于Openssl库更新导致的方法名称变更问题，修复方法如下：<br>···<br>sudo vim /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py<br>···<br>openssl.py文件路径请在上面的报错信息中查找，我这里的路径如上所示。将第52行的<br>···<br>libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)<br>···<br>改为<br>···<br>libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)<br>···<br>还有第111行的</p>
 <p>libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)<br>改为<br>libcrypto.EVP_CIPHER_CTX_reset(self._ctx)<br>第四步：<br>添加开机启动<br>sudo vim /etc/rc.local<br>在最后一行 exit 0 上面添加如下语句：<br>sudo /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start<br>检查是否正常</p>
 <p>sudo systemctl status rc-local.service<br>第五步：<br>使用Polipo将Sock5流量转换为HTTP流量<br>安装Polipo</p>
 <p>sudo apt-get install polipo<br>编辑Polipo配置文件</p>
